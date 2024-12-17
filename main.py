@@ -8,6 +8,10 @@ import os
 
 
 GEMINI_API_KEY = os.getenv("GEN_AI_API_KEY")
+if not GEMINI_API_KEY:
+    st.error("API key is missing or invalid.")
+    st.stop()
+    
 genai.configure(api_key = GEMINI_API_KEY)
 genai_model = genai.GenerativeModel('models/gemini-1.5-flash')
 

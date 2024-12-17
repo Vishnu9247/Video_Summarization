@@ -80,6 +80,9 @@ jobs:
     - name: Set GEN_AI_API_KEY as environment variable
       run: echo "GEN_AI_API_KEY=${{ secrets.GEN_AI_API_KEY }}" >> $GITHUB_ENV
 
+    - name: Debug GEN_AI_API_KEY
+      run: echo "GEN_AI_API_KEY=${{ secrets.GEN_AI_API_KEY }}"
+
 
     - if: matrix.build-mode == 'manual'
       shell: bash

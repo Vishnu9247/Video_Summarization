@@ -7,7 +7,7 @@ import os
 
 
 
-GEMINI_API_KEY = os.getenv('gen_ai_api_key')
+GEMINI_API_KEY = os.getenv(gen_ai_api_key)
 genai.configure(api_key = GEMINI_API_KEY)
 genai_model = genai.GenerativeModel('models/gemini-1.5-flash')
 

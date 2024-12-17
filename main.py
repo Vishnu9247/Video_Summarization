@@ -9,6 +9,7 @@ import os
 
 GEMINI_API_KEY = os.getenv("GEN_AI_API_KEY")
 if not GEMINI_API_KEY:
+    st.text(GEMINI_API_KEY)
     st.error("API key is missing or invalid.")
     st.stop()
     
